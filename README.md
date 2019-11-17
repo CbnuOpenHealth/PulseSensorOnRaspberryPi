@@ -22,6 +22,6 @@
 - PulseSensor x 1
 
 ## 3.테스트
-@[youtube](https://youtu.be/6kN35H8evaE)
+[![Video Label](http://img.youtube.com/vi/6kN35H8evaE/0.jpg)](https://youtu.be/6kN35H8evaE?t=0s)
 > 저가형 센서여서 정확도는 떨어져보이지만 확실히 출력값이 있다
 
