@@ -1,6 +1,6 @@
 # PulseSensorOnRaspberryPi
 
-```
+```c
 /*
 
 		THIS CODE IS RELEASED WITHOUT WARRANTY OF FITNESS
