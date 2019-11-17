@@ -4,6 +4,5 @@
 [맥박센서라즈베리파이](https://github.com/WorldFamousElectronics/Raspberry_Pi/tree/master/PulseSensor_C_Pi)
 입니다.
 ![pulse](https://user-images.githubusercontent.com/55047453/69010706-842cbe00-09a5-11ea-9860-274778c2dc08.png)
-
 > 맥박센서 회로도
 
