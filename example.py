@@ -1,5 +1,7 @@
 from pulsesensor import Pulsesensor
 import time
+import pymysql.cursors
+
 
 p = Pulsesensor()
 p.startAsyncBPM()
@@ -8,8 +10,11 @@ bpmavg = 0
 f = open('pulseChek.txt','w')
 try:
     while True:
+        conn = pymysql.connect(host='localhost', user='ktw', password='12345678', db='testDB') 
+        curs = conn.cursor()
+        sql = 'insert into pulse (datas) values (%s)'
         bpm = p.BPM
-        if bpm > 50 and bpm < 120 :
+        if bpm > 50 and bpm < 160 :
             print("BPM: %d" % bpm)
             i += 1
             bpmavg += bpm
@@ -18,8 +23,10 @@ try:
         time.sleep(1)
         if i == 15:
             bpmavg /= 15
-            f.write("%d\n" % bpmavg)
-            f.close()
-            sys.exit(1)
+            curs.execute(sql, bpmavg)
+            conn.commit()
+            conn.close()
+            print("Check Pulse")
+            i=0
 except:
     p.stopAsyncBPM()
